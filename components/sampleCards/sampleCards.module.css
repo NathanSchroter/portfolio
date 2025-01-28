@@ -1,0 +1,8 @@
+.sampleCard{
+    object-fit: scale-down;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.sampleCard:hover{
+    border: 4px solid #29B2E3;
+}

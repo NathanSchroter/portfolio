@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  gap: 33rem;
+  /* align-items: center;
+  justify-content: space-between; */
+  padding: 10px 15px;
+  background-color: black;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.navIcons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  max-width: 30%;
+}
+
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+}
