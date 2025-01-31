@@ -1,11 +1,38 @@
-    import styles from "@/styles/projects.module.css"
-    {/* <div className={styles.projects}>
-      <SampleCard image={Music}/>
-      <SampleCard image={Canucks}/>
-      <SampleCard image={Cofee}/>
-      <SampleCard image={Elegant}/>
-      <SampleCard image={Bitmask}/>
-      <SampleCard image={Knight}/>
-      <SampleCard image={Love}/>
-      <SampleCard image={Bookstore}/>
-    </div> */}
+import styles from "@/styles/projects.module.css";
+import SampleCard from "@/components/sampleCards";
+import Canucks from "@/public/Canucks.png";
+import Footer from "@/components/footer"
+
+export default function Projects() {
+    return(
+        <>
+        <div className={styles.mainContainer}>
+        <SampleCard 
+          image={Canucks} 
+          title="Vancouver Canucks" 
+          subtitle="Graphic Design"/>
+               <SampleCard 
+          image={Canucks} 
+          title="Vancouver Canucks" 
+          subtitle="Graphic Design"/>
+               <SampleCard 
+          image={Canucks} 
+          title="Vancouver Canucks" 
+          subtitle="Graphic Design"/>
+               <SampleCard 
+          image={Canucks} 
+          title="Vancouver Canucks" 
+          subtitle="Graphic Design"/>
+               <SampleCard 
+          image={Canucks} 
+          title="Vancouver Canucks" 
+          subtitle="Graphic Design"/>
+               <SampleCard 
+          image={Canucks} 
+          title="Vancouver Canucks" 
+          subtitle="Graphic Design"/>
+        </div>
+        <Footer/>
+        </>
+    )
+}

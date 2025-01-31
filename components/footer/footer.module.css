@@ -1,0 +1,63 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background-color: #f4ecde; /* Light beige background */
+  font-family: Arial, sans-serif;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  /* TODO: Add background image for the logo */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.rightSection {
+  display: flex;
+  gap: 40px;
+}
+
+.connect, .work {
+  display: flex;
+  flex-direction: column;
+}
+
+.connect p, .work p {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.icons {
+  display: flex;
+  gap: 12px;
+}
+
+.icons a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  opacity: 0.7;
+}
+
+.work ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.work li {
+  margin-bottom: 4px;
+}
+
+  

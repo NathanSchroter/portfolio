@@ -2,11 +2,12 @@ import Link from 'next/link';
 import styles from "@/styles/Home.module.css";
 import Image from 'next/image';
 import Me from "@/public/me.png";
-
+import Footer from '@/components/footer';
+import SampleCard from '@/components/sampleCards';
+import Canucks from "@/public/Canucks.png";
 export default function Home() {
   return (
     <div className={styles.container}>
-      {/* Left Card + Skills */}
       <div className={styles.leftSection}>
         <div className={styles.leftCard}>
           <Image src={Me} alt="Profile Picture" width={250} height={300} className={styles.profileImage} />
@@ -26,7 +27,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Main Profile Section */}
+
       <div className={styles.mainProfile}>
         <Image src={Me} alt="Main Profile" width={500} height={600} className={styles.mainImage} />
         <div className={styles.overlay}>
@@ -51,6 +52,7 @@ export default function Home() {
         <p className={styles.contactText}>I don’t write messages on social networks. Send me an email and I’ll answer you.</p>
         <Link href="/contact" className={styles.contactButton}>Contact Me</Link>
       </div>
+      {/* <Footer/> */}
     </div>
   );
 }
