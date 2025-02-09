@@ -1,10 +1,10 @@
 .footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px;
-  background-color: #f4ecde; /* Light beige background */
-  font-family: Arial, sans-serif;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 24px 50px 24px 24px;
+  background-color: var(--blue); 
+  color: white;
 }
 
 .leftSection {
@@ -12,16 +12,13 @@
   align-items: center;
 }
 
-.logo {
-  width: 80px;
-  height: 80px;
-  /* TODO: Add background image for the logo */
-  background-size: contain;
-  background-repeat: no-repeat;
+
+.logo img{
+  width: 100px;
+  height: 200px;
 }
 
 .rightSection {
-  display: flex;
   gap: 40px;
 }
 
@@ -33,6 +30,7 @@
 .connect p, .work p {
   font-weight: bold;
   margin-bottom: 8px;
+  font-size: 34px;
 }
 
 .icons {
@@ -41,7 +39,7 @@
 }
 
 .icons a {
-  font-size: 20px;
+  font-size: 30px;
   color: black;
   text-decoration: none;
 }
@@ -60,4 +58,6 @@
   margin-bottom: 4px;
 }
 
-  
+.rightSection h2{
+  font-size: 32px;
+}

@@ -1,61 +1,80 @@
-import Link from 'next/link';
-import styles from "@/styles/Home.module.css";
-import Image from 'next/image';
 import Me from "@/public/me.png";
+import OnceUponAMeal from "@/public/onceOne.png";
+import UNA from "@/public/UNA.png";
+import bookOne from "@/public/bookFour.png"
+import Bookstore from "@/public/Bookstore.png";
 import Footer from '@/components/footer';
-import SampleCard from '@/components/sampleCards';
-import Canucks from "@/public/Canucks.png";
+import Navbar from '@/components/navbar';
+import { useRouter } from 'next/router';
+import styles from '@/styles/Home.module.css';
+
 export default function Home() {
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push('/caseStudyOne');
+  };
+  const handleNavigationTwo = () => {
+    router.push('/caseStudyTwo')
+  }
+  const handleNavigationThree = () => {
+    router.push('/caseStudyThree')
+  }
+
   return (
-    <div className={styles.container}>
-      <div className={styles.leftSection}>
-        <div className={styles.leftCard}>
-          <Image src={Me} alt="Profile Picture" width={250} height={300} className={styles.profileImage} />
-          <p>Passionate about creating and designing websites with the best engaging interfaces.</p>
-          <Link href="/Nathan_Schroter_CV.pdf" download className={styles.downloadButton}>
-            Download CV
-          </Link>
-        </div>
-        <div className={styles.skillsCard}>
-          <h3>Skills</h3>
-          <div className={styles.skillsIcons}>
-            {['AE', 'ID', 'css', 'Figma', 'HTML', 'AI', 'JS', 'PS', 'React'].map(icon => (
-              <Image key={icon} src={`/icons/${icon}.png`} alt={icon} width={40} height={40} className={styles.skillIcon} />
-            ))}
+    <>
+      <div className={styles.container}>
+        <div className={styles.heroSection}>
+          <div className={styles.textContainer}>
+            <h1 className={styles.title}>Nathan is a designer and Graphic Designer who loves to craft great projects.</h1>
+            <p className={styles.subtitle}>
+              I do digital design, brand design, and Motion graphics.<br />
+              Currently, I am a student at <span className={styles.highlight}>BCIT</span>.
+            </p>
           </div>
-          <p>Visit the projects section to see the work done with these web technologies.</p>
-        </div>
-      </div>
-
-
-      <div className={styles.mainProfile}>
-        <Image src={Me} alt="Main Profile" width={500} height={600} className={styles.mainImage} />
-        <div className={styles.overlay}>
-          <h1 className={styles.name}>Nathan Schroter</h1>
-          <div className={styles.buttons}>
-            <Link href="/projects" className={styles.projectButton}>Projects</Link>
-            <Link href="/expericence" className={styles.serviceButton}>Experiences</Link>
+          <div className={styles.imageContainer}>
+            <img src={Me.src} alt="Nathan" className={styles.profileImage} />
           </div>
         </div>
-      </div>
 
-      {/* Right Info Card */}
-      <div className={styles.rightCard}>
-        <h3>Nathan Schroter - <span className={styles.highlight}>Web Designer & Developer</span></h3>
-        <p>Located in [Your Location], I have several years of experience in web development and design, carrying out successful projects.</p>
-        <div className={styles.socialIcons}>
-          <Link href="https://www.linkedin.com/in/nathan-schroter-bb8a982b1/?trk=public-profile-join-page" className={styles.icon}>🔗</Link>
-          <Link href="https://github.com/NathanSchroter" className={styles.icon}>💻</Link>
-          <Link href="https://behance.net" className={styles.icon}>🎨</Link>
+        <div className={styles.caseStudySection}>
+          <h2 className={styles.caseStudyTitle}>DESIGNING Once Upon a Meal</h2>
+          <p className={styles.caseStudyText}>
+            I've worked on all things digital but my focus now is on making sure the profile page works and the posting feeling is correct.
+          </p>
+          <div className={styles.caseStudyImageContainer}>
+            <img src={OnceUponAMeal.src} alt="Case Study" className={styles.caseStudyImage} />
+          </div>
+          <button className={styles.caseStudyButton} onClick={handleNavigation}>View Case Study</button>
         </div>
-        <Image src={Me} alt="Small Profile Image" width={150} height={180} className={styles.smallProfile} />
-        <p className={styles.contactText}>I don’t write messages on social networks. Send me an email and I’ll answer you.</p>
-        <Link href="/contact" className={styles.contactButton}>Contact Me</Link>
+
+        <div className={styles.caseStudySection}>
+          <h2 className={styles.caseStudyTitle}>DESIGNING UNA and Analysis</h2>
+          <p className={styles.caseStudyText}>
+            I've worked on all things digital but my focus now is on making sure the profile page works and the posting feeling is correct.
+          </p>
+          <div className={styles.caseStudyImageContainer}>
+            <img src={bookOne.src} alt="Case Study" className={styles.caseStudyImage} />
+          </div>
+          <button className={styles.caseStudyButton} onClick={handleNavigationTwo}>View Case Study</button>
+        </div>
+
+        <div className={styles.caseStudySection}>
+          <h2 className={styles.caseStudyTitle}>Designing UNA</h2>
+          <p className={styles.caseStudyText}>
+            I've worked on all things digital but my focus now is on making sure the profile page works and the posting feeling is correct.
+          </p>
+          <div className={styles.caseStudyImageContainer}>
+            <img src={UNA.src} alt="Case Study" className={styles.caseStudyImage} />
+          </div>
+          <button className={styles.caseStudyButton} onClick={handleNavigationThree}>View Case Study</button>
+        </div>
       </div>
-      {/* <Footer/> */}
-    </div>
+      <Footer />
+    </>
   );
 }
+
 
 
 

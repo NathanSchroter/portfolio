@@ -1,19 +1,30 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import styles from "./sampleCards.module.css";
 
-export default function SampleCard({ image, title, subtitle }) {
+export default function SampleCard({ image, title, subtitle, caseStudyLink }) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(caseStudyLink);
+  };
+
   return (
     <div className={styles.cardContainer}>
       <div className={styles.imageWrapper}>
-        <Image src={image} alt="sampleCardImage" width={332} height={432} className={styles.sampleCard} />
+        <Image src={image} alt="sampleCardImage" width={"auto"} height={"auto"} className={styles.sampleCard} />
       </div>
       <div className={styles.textContainer}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.subtitle}>{subtitle}</p>
+        {/* <button className={styles.viewButton} onClick={handleClick}>
+          <p>View Case</p>
+        </button> */}
       </div>
     </div>
   );
 }
+
 
   
   
